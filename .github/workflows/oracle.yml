@@ -1,0 +1,14 @@
+name: test build
+
+on: [ push, delete, create ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container:
+      image: alpine        
+    steps:
+    - name: Hello world
+      run: |
+        echo "Hello world!"
